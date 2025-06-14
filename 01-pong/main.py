@@ -1,4 +1,11 @@
-import pygame
+from setup import *
+from game_loop import *
+from game_variables import GameVariables
 
-def init():
-  pygame.init()
+gameHandler = GameVariables()
+
+# Run initialization
+initialize_game(gameHandler)
+
+# Runs game loop
+game_loop(gameHandler)

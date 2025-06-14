@@ -1,0 +1,34 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+env/
+.venv/
+
+# VSCode config (se estiver usando)
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Pygame generated files (se algum dia usar save states, etc)
+*.log
+*.sav
+
+# Optional: ignore IDE-specific project files
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Optional: pyinstaller build folders (se um dia fizer build de executável)
+build/
+dist/
+*.spec
