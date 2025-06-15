@@ -11,7 +11,7 @@ game_config = InitGameConfig()
 ball_config = InitBallConfig(game_config)
 
 gameHandler = GameVariables()
-player = Paddle()
+player = Paddle(game_config)
 ball = Ball(game_config, ball_config)
 
 # Run initialization

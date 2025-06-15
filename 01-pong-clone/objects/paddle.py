@@ -1,7 +1,8 @@
 import pygame
 
 class Paddle:
-  def __init__(self):
+  def __init__(self, game_config):
+    self.game_config = game_config
     self.x = None 
     self.y = None 
     self.width = 10
@@ -20,7 +21,12 @@ class Paddle:
   def move(self):
     self.y += self.direction * self.normal_speed
 
-  # def 
+  def handle_collision(self):
+    if self.y < 0:
+      self.y = 0
+    elif self.y + self.height > self.game_config.screen_height:
+      self.y = self.game_config.screen_height - self.height 
+    
 
 
   def render(self, surface):

@@ -5,5 +5,5 @@
 - ✅ Handle paddle movement
 - ⬛ Store last pressed key paddle movement
 - ✅ Create Ball class
-- ✅ Automatically move ball
+- ✅ Add ball movement
 - ✅ Handle ball collision with walls

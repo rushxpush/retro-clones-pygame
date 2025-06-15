@@ -11,6 +11,7 @@ def game_loop(gameHandler, player, ball):
     HandleEvents(gameHandler, player)
     update(gameHandler, player, ball)
     ball.handle_collision()
+    player.handle_collision()
     render(gameHandler, player, ball)
 
     gameHandler.tick()
