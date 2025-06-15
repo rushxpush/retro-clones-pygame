@@ -1,3 +1,3 @@
-def update(gameHandler, player, ball, game_objects):
+def update(game_objects):
   game_objects['player'].move()
   game_objects['ball'].move()
