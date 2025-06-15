@@ -2,8 +2,8 @@ import pygame
 from pygame.locals import *
 
 class Ball:
-  def __init__(self, game_config, ball_config):
-    self.game_config = game_config
+  def __init__(self, ball_config):
+    self.game_config = ball_config.game_config
     self.x = ball_config.x
     self.y = ball_config.y
     self.radius = ball_config.radius

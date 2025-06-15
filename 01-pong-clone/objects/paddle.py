@@ -2,8 +2,8 @@ import pygame
 from pygame.locals import *
 
 class Paddle:
-  def __init__(self, game_config, player_config):
-    self.game_config = game_config
+  def __init__(self, player_config):
+    self.game_config = player_config.game_config
     self.x = player_config.x 
     self.y = player_config.y 
     self.width = player_config.width

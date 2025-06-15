@@ -1,7 +1,7 @@
 import pygame
 
 # Initialization
-def initialize_game(game_config, gameHandler, player):
+def initialize_game(gameHandler, game_config):
   # Init pygame
   pygame.init()
 

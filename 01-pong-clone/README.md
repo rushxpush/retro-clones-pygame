@@ -23,9 +23,6 @@
 ### ⬛ Visual and UX Polish
 - ⬛ Improve text renderer for UI screens
 
-
-
-
 ## Dev Notes (for future blog)
 
 ### Why I Started Classic Games Clone Series

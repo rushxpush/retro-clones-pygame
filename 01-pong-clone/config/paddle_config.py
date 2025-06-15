@@ -1,5 +1,7 @@
 class InitPaddleConfig:
-  def __init__(self):
+  def __init__(self, game_handler, game_config):
+    self.game_handler = game_handler
+    self.game_config = game_config
     self.x = 10
     self.y = 10
     self.width = 10
