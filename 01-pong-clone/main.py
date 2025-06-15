@@ -2,9 +2,9 @@ from setup import *
 from game_loop import *
 from game_variables import GameVariables
 
+from config.game_config import InitGameConfig
 from config.paddle_config import InitPaddleConfig
 from config.ball_config import InitBallConfig
-from config.game_config import InitGameConfig
 
 from objects.paddle import Paddle
 from objects.ball import Ball
@@ -23,7 +23,7 @@ ball = Ball(ball_config)
 
 game_objects = {
   'player': player,
-  'ball': ball
+  'ball': ball,
 }
 
 # Runs game loop

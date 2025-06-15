@@ -23,6 +23,9 @@
 ### ⬛ Visual and UX Polish
 - ⬛ Improve text renderer for UI screens
 
+### ⬛ Gameplay improvement
+- ⬛ Reduce paddle collision box 
+
 ## Dev Notes (for future blog)
 
 ### Why I Started Classic Games Clone Series
