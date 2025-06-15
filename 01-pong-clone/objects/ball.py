@@ -15,6 +15,9 @@ class Ball:
   
   def render(self, surface):
     pygame.draw.circle(surface, self.color, (self.x, self.y), self.radius)
+  
+  def render_collision_box(self, surface):
+    pygame.draw.rect(surface, (255, 0, 0), (self.rect.x, self.rect.y, self.radius * 2, self.radius * 2))
 
   def move(self):
     # update position

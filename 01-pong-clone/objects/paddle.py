@@ -17,12 +17,17 @@ class Paddle:
     self.rect = Rect(self.x, self.y, self.width, self.height)
 
     self.last_key_pressed = None
+
+  def render_collision_box(self, surface):
+    pygame.draw.rect(surface, (0, 255, 0), self.rect)
   
   def set_direction(self, direction):
     self.direction = direction
 
   def move(self):
     self.y += self.direction * self.normal_speed
+    
+    self.rect.y += self.direction * self.normal_speed
 
   def update_collision_box(self):
     self.rect.x = self.x
@@ -33,8 +38,6 @@ class Paddle:
       self.y = 0
     elif self.y + self.height > self.game_config.screen_height:
       self.y = self.game_config.screen_height - self.height 
-    
-
 
   def render(self, surface):
     pygame.draw.rect(surface, self.color, pygame.Rect(self.x, self.y, self.width, self.height))

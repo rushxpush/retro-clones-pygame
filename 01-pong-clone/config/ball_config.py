@@ -5,6 +5,7 @@ class InitBallConfig:
     self.radius = 5
     self.speed = 2 
     self.direction_x = -1
-    self.direction_y = -1
+    # self.direction_y = -1
+    self.direction_y = 0
     self.color = (255, 255, 255)
 
