@@ -1,17 +1,20 @@
 import pygame
+from pygame.locals import *
 
 class Paddle:
-  def __init__(self, game_config):
+  def __init__(self, game_config, player_config):
     self.game_config = game_config
-    self.x = None 
-    self.y = None 
-    self.width = 10
-    self.height = 30
-    self.color = (255, 255, 255)
+    self.x = player_config.x 
+    self.y = player_config.y 
+    self.width = player_config.width
+    self.height = player_config.height
+    self.color = player_config.color 
 
-    self.direction = 0
-    self.normal_speed = 4 
-    self.fast_speed = 6
+    self.direction = player_config.direction
+    self.normal_speed = player_config.normal_speed
+    self.fast_speed = player_config.fast_speed
+
+    self.rect = Rect(self.x, self.y, self.width, self.height)
 
     self.last_key_pressed = None
   
@@ -20,6 +23,10 @@ class Paddle:
 
   def move(self):
     self.y += self.direction * self.normal_speed
+
+  def update_collision_box(self):
+    self.rect.x = self.x
+    self.rect.y = self.y
 
   def handle_collision(self):
     if self.y < 0:

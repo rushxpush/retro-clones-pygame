@@ -2,6 +2,7 @@ import pygame
 from input_handler import *
 from update import *
 from render import *
+from collision_handler import check_ball_paddle_collision
 
 # Game Loop
 def game_loop(gameHandler, player, ball):
@@ -12,6 +13,8 @@ def game_loop(gameHandler, player, ball):
     update(gameHandler, player, ball)
     ball.handle_collision()
     player.handle_collision()
+    check_ball_paddle_collision(ball, player)
+
     render(gameHandler, player, ball)
 
     gameHandler.tick()
