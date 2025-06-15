@@ -21,5 +21,10 @@ ball_config = InitBallConfig(game_handler, game_config)
 player = Paddle(player_config)
 ball = Ball(ball_config)
 
+game_objects = {
+  'player': player,
+  'ball': ball
+}
+
 # Runs game loop
-game_loop(game_handler, player, ball)
+game_loop(game_handler, game_objects)
