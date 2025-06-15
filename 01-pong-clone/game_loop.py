@@ -4,13 +4,14 @@ from update import *
 from render import *
 
 # Game Loop
-def game_loop(gameHandler):
+def game_loop(gameHandler, player, ball):
   running = True
 
   while gameHandler.is_game_running:
-    handle_events(gameHandler)
-    update(gameHandler)
-    render(gameHandler)
+    HandleEvents(gameHandler, player)
+    update(gameHandler, player, ball)
+    ball.handle_collision()
+    render(gameHandler, player, ball)
 
     gameHandler.tick()
   
