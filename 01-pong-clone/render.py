@@ -10,8 +10,9 @@ def render(gameHandler, game_objects):
   game_objects['field'].render(gameHandler.surface)
 
   # DEBUG
-  # ball.render_collision_box(gameHandler.surface)
-  # player.render_collision_box(gameHandler.surface)
+  # game_objects['player_1'].render_collision_box(gameHandler.surface)
+  # game_objects['player_2'].render_collision_box(gameHandler.surface)
+  # game_objects['ball'].render_collision_box(gameHandler.surface)
   pygame.display.flip()
 
 

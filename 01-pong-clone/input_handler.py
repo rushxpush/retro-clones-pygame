@@ -1,6 +1,6 @@
 import pygame 
 
-def HandleEvents(gameHandler, player):
+def HandleEvents(gameHandler, player_objects):
   keystate = pygame.key.get_pressed()
 
   # Check if close button was clicked
@@ -12,11 +12,25 @@ def HandleEvents(gameHandler, player):
 
   if keystate[pygame.K_ESCAPE]:
     gameHandler.is_game_running = False
-  elif keystate[pygame.K_UP] and not keystate[pygame.K_DOWN]:
-    player.set_direction(-1)
-  elif keystate[pygame.K_DOWN] and not keystate[pygame.K_UP]:
-    player.set_direction(1)
-  elif keystate[pygame.K_DOWN] and keystate[pygame.K_UP]:
-    player.set_direction(1)
+
+  # Player 1
+  if keystate[pygame.K_w] and not keystate[pygame.K_s]:
+    player_objects['player_1'].set_direction(-1)
+  elif keystate[pygame.K_s] and not keystate[pygame.K_w]:
+    player_objects['player_1'].set_direction(1)
+  elif keystate[pygame.K_s] and keystate[pygame.K_w]:
+    player_objects['player_1'].set_direction(1)
   else:
-    player.set_direction(0)
+    player_objects['player_1'].set_direction(0)
+
+  # Player 2 
+  if keystate[pygame.K_UP] and not keystate[pygame.K_DOWN]:
+    player_objects['player_2'].set_direction(-1)
+  elif keystate[pygame.K_DOWN] and not keystate[pygame.K_UP]:
+    player_objects['player_2'].set_direction(1)
+  elif keystate[pygame.K_DOWN] and keystate[pygame.K_UP]:
+    player_objects['player_2'].set_direction(1)
+  else:
+    player_objects['player_2'].set_direction(0)
+
+
