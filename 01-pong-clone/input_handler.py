@@ -1,17 +1,17 @@
 import pygame 
 
-def HandleEvents(gameHandler, player_objects):
+def HandleEvents(game_handler, player_objects):
   keystate = pygame.key.get_pressed()
 
   # Check if close button was clicked
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
-      gameHandler.is_game_running = False
+      game_handler.is_game_running = False
 
 
 
   if keystate[pygame.K_ESCAPE]:
-    gameHandler.is_game_running = False
+    game_handler.is_game_running = False
 
   # Player 1
   if keystate[pygame.K_w] and not keystate[pygame.K_s]:

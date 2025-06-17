@@ -1,4 +1,4 @@
-class InitBallConfig:
+class BallConfig:
   def __init__(self, game_handler, game_config):
     self.game_handler = game_handler
     self.game_config = game_config
@@ -10,7 +10,7 @@ class InitBallConfig:
 
     self.speed = 3 
     self.direction_x = -1
-    # self.direction_y = -1
-    self.direction_y = 0
+    self.direction_y = -1
+    # self.direction_y = 0
     self.color = (255, 255, 255)
 

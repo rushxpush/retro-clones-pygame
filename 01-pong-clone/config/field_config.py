@@ -1,4 +1,4 @@
-class InitFieldConfig:
+class FieldConfig:
   def __init__(self, game_handler, game_config):
     self.game_handler = game_handler
     self.game_config = game_config

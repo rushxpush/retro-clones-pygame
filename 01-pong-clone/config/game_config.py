@@ -1,4 +1,4 @@
-class InitGameConfig:
+class GameConfig:
   def __init__(self):
     self.surface = None
     self.screen_width = 400
