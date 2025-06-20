@@ -12,6 +12,8 @@ from objects.paddle import Paddle
 from objects.ball import Ball
 from objects.field import Field
 
+from states.playing_state import PlayingState
+
 # Initialization
 game_handler = GameVariables()
 game_config = GameConfig()
@@ -23,6 +25,7 @@ player_2_config = Player2Config(game_handler, game_config)
 ball_config = BallConfig(game_handler, game_config)
 field_config = FieldConfig(game_handler, game_config)
 
+# Instantiate objects
 player_1 = Paddle(player_1_config)
 player_2 = Paddle(player_2_config)
 ball = Ball(ball_config)
@@ -34,6 +37,9 @@ game_objects = {
   'ball': ball,
   'field': field
 }
+
+# Init Game States
+game_handler.current_state = PlayingState(game_handler, game_objects)
 
 # Runs game loop
 game_loop(game_handler, game_objects)

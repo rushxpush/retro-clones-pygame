@@ -1,6 +1,6 @@
 ## Todo
 
-### ✅ Core Gameplay
+### ⬛ Core Gameplay
 - ✅ Implement game loop
 - ✅ Handle player paddle movement
 - ⬛ Improve paddle control: store and use last pressed key
@@ -8,13 +8,14 @@
 - ✅ Handle ball-wall collision
 
 ### ⬛ Gameplay Features
-- ⬛ Implement field visuals (center divider and boundary lines)
-- ⬛ Add enemy paddle (Player 2 or AI)
+- ✅ Implement field visuals (center divider and boundary lines)
+- ✅ Add enemy paddle (Player 2)
+- ⬛Add AI to player 2 paddle 
 - ⬛ Implement scoring system
 - ⬛ Display score using text rendering
 
 ### ⬛ UI and Game States
-- ⬛ Refactor code to run inside a game screen/state system
+- ✅Refactor code to run inside a game screen/state system
 - ⬛ Implement Main Menu screen
 - ⬛ Implement Pre-Game Config screen (target score, difficulty)
 - ⬛ Implement Game Over screen (winner display, restart option)
@@ -25,6 +26,9 @@
 
 ### ⬛ Gameplay improvement
 - ⬛ Reduce paddle collision box 
+
+### Bugs
+- ⬛ Pressing the key up against the wall makes the paddle render inside de wall
 
 ## Dev Notes (for future blog)
 
