@@ -42,4 +42,4 @@ game_objects = {
 game_handler.current_state = PlayingState(game_handler, game_objects)
 
 # Runs game loop
-game_loop(game_handler, game_objects)
+game_loop(game_handler)
