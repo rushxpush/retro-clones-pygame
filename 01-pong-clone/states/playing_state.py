@@ -2,7 +2,7 @@ import pygame
 from collision_handler import check_collisions
 
 class PlayingState:
-  def __init__(self,game_handler, game_objects):
+  def __init__(self, game_handler, game_objects):
     self.game_handler = game_handler
     self.game_objects = game_objects
     self.player_objects = {
@@ -52,7 +52,7 @@ class PlayingState:
     self.game_objects['ball'].move()
 
   def render(self):
-    self.game_handler.clearScreen()
+    # self.game_handler.clearScreen()
     self.game_objects['player_1'].render(self.game_handler.surface)
     self.game_objects['player_2'].render(self.game_handler.surface)
     self.game_objects['ball'].render(self.game_handler.surface)
@@ -62,4 +62,4 @@ class PlayingState:
     # self.game_objects['player_1'].render_collision_box(game_handler.surface)
     # self.game_objects['player_2'].render_collision_box(game_handler.surface)
     # self.game_objects['ball'].render_collision_box(game_handler.surface)
-    pygame.display.flip()
+    # pygame.display.flip()

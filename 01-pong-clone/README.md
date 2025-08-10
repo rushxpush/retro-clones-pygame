@@ -10,16 +10,16 @@
 ### ⬛ Gameplay Features
 - ✅ Implement field visuals (center divider and boundary lines)
 - ✅ Add enemy paddle (Player 2)
-- ⬛Add AI to player 2 paddle 
+- ⬛ Add AI to player 2 paddle 
 - ⬛ Implement scoring system
 - ⬛ Display score using text rendering
 
 ### ⬛ UI and Game States
 - ✅Refactor code to run inside a game screen/state system
-- ⬛ Implement Main Menu screen
+- ✅ Implement Main Menu screen
+- ✅ Create basic UI components (buttons, labels)
 - ⬛ Implement Pre-Game Config screen (target score, difficulty)
 - ⬛ Implement Game Over screen (winner display, restart option)
-- ⬛ Create basic UI components (buttons, labels)
 
 ### ⬛ Visual and UX Polish
 - ⬛ Improve text renderer for UI screens
@@ -55,6 +55,7 @@ Cloning classic games like Pong, Tetris, and platformers allows me to learn core
 - Implementing a flexible state management system for screens.
 - Creating a reusable UI system (starting with buttons and text).
 - Handling AI or 2-player input for the second paddle.
+- Create a StateManager to manager the screen transitions
 
 
 ✅ Outros tópicos  ir anotando conforme progride:
