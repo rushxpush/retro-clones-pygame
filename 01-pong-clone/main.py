@@ -13,6 +13,7 @@ from objects.ball import Ball
 from objects.field import Field
 
 from states.playing_state import PlayingState
+from states.main_menu_state import MainMenuState
 
 # Initialization
 game_handler = GameVariables()
@@ -39,7 +40,8 @@ game_objects = {
 }
 
 # Init Game States
-game_handler.current_state = PlayingState(game_handler, game_objects)
+# game_handler.current_state = PlayingState(game_handler, game_objects)
+game_handler.current_state = MainMenuState(game_handler, game_config, game_objects)
 
 # Runs game loop
 game_loop(game_handler)
