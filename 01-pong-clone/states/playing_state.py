@@ -83,10 +83,13 @@ def check_ball_out_of_bounds(self): # handle_ball_out_of_bounds?
   didBallGoOutOfBounds = not self.ball_object.get_rect().colliderect(self.field_object.get_rect())
 
   if (didBallGoOutOfBounds):
-    next_round(self)
-    None
+    ball_direction_x = self.game_objects['ball'].get_direction()[0]
+    if ball_direction_x < 0:
+      self.game_objects['score'].increase_score('player_2')
+    else:
+      self.game_objects['score'].increase_score('player_1')
 
-  None
+    next_round(self)
 
 # Reset playing state for next round
 def next_round(self):

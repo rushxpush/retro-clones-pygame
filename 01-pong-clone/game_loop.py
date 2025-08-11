@@ -10,5 +10,6 @@ def game_loop(game_handler):
     game_handler.current_state.render()
     pygame.display.flip()
     game_handler.tick()
+    game_handler.current_state.checkState()
   
   pygame.quit()

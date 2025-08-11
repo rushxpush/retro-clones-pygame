@@ -23,6 +23,9 @@ class Ball:
   
   def get_rect(self):
     return self.rect
+  
+  def get_direction(self):
+    return (self.direction_x, self.direction_y)
 
   def move(self):
     # update position

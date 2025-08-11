@@ -11,6 +11,7 @@ from config.field_config import FieldConfig
 from objects.paddle import Paddle
 from objects.ball import Ball
 from objects.field import Field
+from objects.score import Score
 
 from states.playing_state import PlayingState
 from states.main_menu_state import MainMenuState
@@ -31,12 +32,14 @@ player_1 = Paddle(player_1_config)
 player_2 = Paddle(player_2_config)
 ball = Ball(ball_config)
 field = Field(field_config)
+score = Score()
 
 game_objects = {
   'player_1': player_1,
   'player_2': player_2,
   'ball': ball,
-  'field': field
+  'field': field,
+  'score': score
 }
 
 # Init Game States
