@@ -24,7 +24,6 @@ class MainMenuState:
     # BUTTON 1 - PLAYER 1
     self.button_1_x_pos = self.game_config.screen_width / 2 - self.button_width / 2
     self.button_1_y_pos = math.floor(self.button_height * 2)
-    print('self.button_1_y_pos: ', self.button_1_y_pos)
 
     self.button_1_rect = pygame.Rect(self.button_1_x_pos, self.button_1_y_pos, self.button_width, self.button_height)
     self.button_start_game_1_player = Button(game_handler, self.button_1_text_surface, self.button_1_rect)
@@ -32,7 +31,6 @@ class MainMenuState:
     # BUTTON 2 - PLAYER 2
     self.button_2_x_pos = self.game_config.screen_width / 2 - self.button_width / 2
     self.button_2_y_pos = math.floor(self.button_height * 3)
-    print('self.button_2_y_pos: ', self.button_2_y_pos)
 
     self.button_2_rect = pygame.Rect(self.button_2_x_pos, self.button_2_y_pos, self.button_width, self.button_height)
     self.button_start_game_2_player = Button(game_handler, self.button_2_text_surface, self.button_2_rect)
@@ -40,7 +38,6 @@ class MainMenuState:
     # BUTTON 3 - OPTIONS
     self.button_options_x_pos = self.game_config.screen_width / 2 - self.button_width / 2
     self.button_options_y_pos = math.floor(self.button_height * 4)
-    print('self.button_options_y_pos: ', self.button_options_y_pos)
 
     self.button_options_rect = pygame.Rect(self.button_options_x_pos, self.button_options_y_pos, self.button_width, self.button_height)
     self.button_options = Button(game_handler, self.button_options_text_surface, self.button_options_rect)
@@ -48,7 +45,6 @@ class MainMenuState:
     # BUTTON 4 - QUIT
     self.button_quit_x_pos = self.game_config.screen_width / 2 - self.button_width / 2
     self.button_quit_y_pos = math.floor(self.button_height * 5)
-    print('self.button_quit_y_pos: ', self.button_quit_y_pos)
 
     self.button_quit_rect = pygame.Rect(self.button_quit_x_pos, self.button_quit_y_pos, self.button_width, self.button_height)
     self.button_quit = Button(game_handler, self.button_quit_text_surface, self.button_quit_rect)
@@ -92,6 +88,8 @@ class MainMenuState:
 
       if isMouseClicked:
         self.button_start_game_1_player.change_bg_color('clicked')
+        # I have to change this. Maybe pass a variable that says the game is 1 player
+        # and the ia should be loaded?
         self.game_handler.current_state = PlayingState(self.game_handler, self.game_objects)
 
     else:
@@ -103,6 +101,7 @@ class MainMenuState:
 
       if isMouseClicked:
         self.button_start_game_2_player.change_bg_color('clicked')
+        self.game_handler.current_state = PlayingState(self.game_handler, self.game_objects)
 
     else:
       self.button_start_game_2_player.change_bg_color('default')

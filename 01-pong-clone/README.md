@@ -11,7 +11,7 @@
 - ✅ Implement field visuals (center divider and boundary lines)
 - ✅ Add enemy paddle (Player 2)
 - ✅ Restart round after ball moves out of the playing field
-- ⬛ Implement scoring system
+- ✅ Implement scoring system
 - ⬛ Add AI to player 2 paddle 
 - ⬛ Display score using text rendering
 
@@ -27,7 +27,7 @@
 
 ### ⬛ Gameplay improvement
 - ⬛ Reduce paddle collision box 
-- ⬛ Set a small interval when every round starts
+- ✅ Set a small interval when every round starts
 
 ### Bugs
 - ⬛ Pressing the key up against the wall makes the paddle render inside de wall

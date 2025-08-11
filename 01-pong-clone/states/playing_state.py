@@ -72,6 +72,8 @@ class PlayingState:
     self.game_objects['player_2'].render(self.game_handler.surface)
     self.game_objects['ball'].render(self.game_handler.surface)
     self.game_objects['field'].render(self.game_handler.surface)
+    # self.game_handler['score'].render(self.game_handler.surface)
+    self.game_objects['score'].render()
 
     # DEBUG
     # self.game_objects['player_1'].render_collision_box(game_handler.surface)
