@@ -10,8 +10,9 @@
 ### ⬛ Gameplay Features
 - ✅ Implement field visuals (center divider and boundary lines)
 - ✅ Add enemy paddle (Player 2)
-- ⬛ Add AI to player 2 paddle 
+- ✅ Restart round after ball moves out of the playing field
 - ⬛ Implement scoring system
+- ⬛ Add AI to player 2 paddle 
 - ⬛ Display score using text rendering
 
 ### ⬛ UI and Game States
@@ -26,6 +27,7 @@
 
 ### ⬛ Gameplay improvement
 - ⬛ Reduce paddle collision box 
+- ⬛ Set a small interval when every round starts
 
 ### Bugs
 - ⬛ Pressing the key up against the wall makes the paddle render inside de wall
@@ -51,14 +53,16 @@ Cloning classic games like Pong, Tetris, and platformers allows me to learn core
 - Separating game objects (Paddle, Ball) from game state logic made the code easier to manage. I already got web dev experience with this, so it made sense to make the game objects separated. Maybe the code is a bit over engineered for a PONG clone, but I'm thinking about some future modifications I'd like to do to the gameplay. And more important, I want to reuse what's possible from the PONG clone code on the next projects, maybe creating a library of reusable components.
 - Even the simplest game can be a challenge to code and make smooth. There's always something to be done and the temptation to 'scope creep' is ever present.
 
+### Developers' Diary 
+
+- (2025-08-10) Today I decided to focus more on implementing prototypes of the features I want the game to have instead of trying to make it perfect on the first pass. Trying to be perfect was slowing me down too much. So I divided my coding process into two: prototype -> refactor. This way I can implement and explorer mechanics without getting bogged down with trying to make something clean. If fictions writers can write a first manuscript and then edit it later, why shouldn't I, right?
+
 ### Next Technical Challenges
 - Implementing a flexible state management system for screens.
 - Creating a reusable UI system (starting with buttons and text).
 - Handling AI or 2-player input for the second paddle.
 - Create a StateManager to manager the screen transitions
 
-
-✅ Outros tópicos  ir anotando conforme progride:
 Other topics to jot down while I'm making progress on the game:
 
 - Difficulties found during development
@@ -66,4 +70,4 @@ Other topics to jot down while I'm making progress on the game:
 - Mistakes I made and how I solved then
 - Small interesting bugs that happened
 - Ideas of stuff that could be better that I'll just put on the backlog
-- Reflexios about my learning (ex.: "never thought a PONG clone would teach me something like this or that...")
+- Reflexions about my learning (ex.: "never thought a PONG clone would teach me something like this or that...")

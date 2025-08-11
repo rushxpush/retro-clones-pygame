@@ -4,6 +4,8 @@ from pygame.locals import *
 class Ball:
   def __init__(self, ball_config):
     self.game_config = ball_config.game_config
+    self.start_pos_x = ball_config.x
+    self.start_pos_y = ball_config.y
     self.x = ball_config.x
     self.y = ball_config.y
     self.radius = ball_config.radius
@@ -18,6 +20,9 @@ class Ball:
   
   def render_collision_box(self, surface):
     pygame.draw.rect(surface, (255, 0, 0), (self.rect.x, self.rect.y, self.radius * 2, self.radius * 2))
+  
+  def get_rect(self):
+    return self.rect
 
   def move(self):
     # update position
@@ -25,6 +30,10 @@ class Ball:
     self.y += self.direction_y * self.speed
 
     self.update_collision_box()
+  
+  def set_position(self, pos_x, pos_y):
+    self.x = pos_x
+    self.y = pos_y
   
   def update_collision_box(self):
     self.rect.x = self.x - self.radius

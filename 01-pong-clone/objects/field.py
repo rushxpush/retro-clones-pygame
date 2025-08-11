@@ -11,6 +11,11 @@ class Field:
 
     self.top_wall_rect = Rect(0, 0, self.width, self.thickness)
     self.bottom_wall_rect = Rect(0, self.height - self.thickness, self.width, self.thickness)
+
+    self.rect = Rect(0, 0, self.game_config.screen_width, self.game_config.screen_height)
+  
+  def get_rect(self):
+    return self.rect
   
   def render(self, surface):
     self.draw_walls(surface)

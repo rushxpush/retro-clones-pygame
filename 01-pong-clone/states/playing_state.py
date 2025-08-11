@@ -9,6 +9,20 @@ class PlayingState:
       'player_1': game_objects['player_1'],
       'player_2': game_objects['player_2']
     }
+    self.ball_object = game_objects['ball']
+    self.field_object = game_objects['field']
+
+    self.didRoundStart = False
+    self.timeDelay = 1000
+
+  def checkState(self):
+    # Delay the game for x milliseconds after pressing the button
+    # to start the game
+    # Maybe I should just delay the ball movement
+    # But for now, this will do
+    if not self.didRoundStart:
+      pygame.time.delay(self.timeDelay)
+      self.didRoundStart = True
     
   def handle_events(self):
     keystate = pygame.key.get_pressed()
@@ -45,6 +59,7 @@ class PlayingState:
   def update(self):
     self.move_objects()
     check_collisions(self.game_objects)
+    check_ball_out_of_bounds(self)
 
   def move_objects(self):
     self.game_objects['player_1'].move()
@@ -63,3 +78,24 @@ class PlayingState:
     # self.game_objects['player_2'].render_collision_box(game_handler.surface)
     # self.game_objects['ball'].render_collision_box(game_handler.surface)
     # pygame.display.flip()
+  
+def check_ball_out_of_bounds(self): # handle_ball_out_of_bounds?
+  didBallGoOutOfBounds = not self.ball_object.get_rect().colliderect(self.field_object.get_rect())
+
+  if (didBallGoOutOfBounds):
+    next_round(self)
+    None
+
+  None
+
+# Reset playing state for next round
+def next_round(self):
+  # Set ball start position
+  start_pos_x = self.game_objects['ball'].start_pos_x
+  start_pos_y = self.game_objects['ball'].start_pos_y
+
+  self.game_objects['ball'].set_position(start_pos_x, start_pos_y)
+
+  # Reset round start delay
+  self.didRoundStart = False
+
